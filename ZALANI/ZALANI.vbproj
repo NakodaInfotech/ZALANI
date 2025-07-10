@@ -393,6 +393,15 @@
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Reports\Crystal Reports\Packing Slip\PackingSlipReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Crystal Reports\Packing Slip\PackingSlipReport1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PackingSlipReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\Crystal Reports\Production\Production Issue\ProdIssReport.vb">
       <DependentUpon>ProdIssReport.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -1864,6 +1873,10 @@
     <EmbeddedResource Include="Reports\Crystal Reports\Material Requirement\MatReqReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>MatReqReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Crystal Reports\Packing Slip\PackingSlipReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PackingSlipReport1.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Crystal Reports\Production\Production Issue\ProdIssReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
