@@ -1179,6 +1179,10 @@ NEXTLINE:
         numdotkeypress(e, sender, Me)
     End Sub
 
+    Private Sub CMDSHOWIMG_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
     Private Sub TXTQTY_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXTQTY.KeyPress, TXTREELNO.KeyPress, TXTACCEPTEDQTY.KeyPress, TXTACCEPTEDQTY.KeyPress, TXTSIZE.KeyPress
         numkeypress(e, sender, Me)
     End Sub
