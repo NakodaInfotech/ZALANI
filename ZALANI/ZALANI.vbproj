@@ -393,9 +393,6 @@
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Reports\Crystal Reports\Packing Slip\PackingSlipReport.vb">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Reports\Crystal Reports\Packing Slip\PackingSlipReport1.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
