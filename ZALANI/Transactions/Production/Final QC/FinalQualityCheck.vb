@@ -344,6 +344,7 @@ Public Class FinalQualityCheck
                     Next
 
 
+
                     Dim dt As DataTable = OBJCMN.SEARCH("  ISNULL(FINALQUALITYCHECK_PARAMETERS.FQC_NO, 0) AS QCNO, ISNULL(FINALQUALITYCHECK_PARAMETERS.FQC_PGRIDSRNO, 0) AS PGRIDSRNO, ISNULL(FINALQUALITYCHECK_PARAMETERS.FQC_PARTYOBS, '') AS PARTYOBS, ISNULL(FINALQUALITYCHECK_PARAMETERS.FQC_OUROBS, '') AS OUROBS, ISNULL(QCPARAMETERMASTER.QC_name, '') AS PARAMETERNAME", "", "  FINALQUALITYCHECK_PARAMETERS LEFT OUTER JOIN QCPARAMETERMASTER ON FINALQUALITYCHECK_PARAMETERS.FQC_PARAMETERID = QCPARAMETERMASTER.QC_id ", "  AND FINALQUALITYCHECK_PARAMETERS.FQC_NO = " & TEMPQCNO & " AND  FINALQUALITYCHECK_PARAMETERS.FQC_YEARID = " & YearId & " ORDER BY  FINALQUALITYCHECK_PARAMETERS.FQC_Pgridsrno")
                     If dt.Rows.Count > 0 Then
                         For Each DTR As DataRow In dt.Rows
@@ -916,7 +917,7 @@ LINE1:
 
     Sub PRINTREPORT(QCNO)
         Try
-            If MsgBox("Wish to Print Rejected QC Report?", MsgBoxStyle.YesNo) = MsgBoxResult.No Then
+            If MsgBox("Wish to Print Rejected QC Report?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
                 Dim OBJGRN As New GRNDesign
                 OBJGRN.MdiParent = MDIMain
                 OBJGRN.GRNNO = QCNO
@@ -925,7 +926,7 @@ LINE1:
                 OBJGRN.Show()
             End If
 
-            If MsgBox("Wish to Print QC Test Report?", MsgBoxStyle.YesNo) = MsgBoxResult.No Then
+            If MsgBox("Wish to Print QC Test Report?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
                 Dim OBJGRN As New GRNDesign
                 OBJGRN.MdiParent = MDIMain
                 OBJGRN.GRNNO = QCNO
@@ -1265,6 +1266,24 @@ NEXTLINE:
 
         Catch ex As Exception
             Throw ex
+        End Try
+    End Sub
+
+    Private Sub tstxtbillno_Validating(sender As Object, e As CancelEventArgs) Handles tstxtbillno.Validating
+        Try
+            If Val(tstxtbillno.Text.Trim) > 0 Then
+                GRIDQC.RowCount = 0
+                TEMPQCNO = Val(tstxtbillno.Text)
+                If TEMPQCNO > 0 Then
+                    EDIT = True
+                    QualityCheck_Load(sender, e)
+                Else
+                    CLEAR()
+                    EDIT = False
+                End If
+            End If
+        Catch ex As Exception
+            If ErrHandle(ex.Message.GetHashCode) = False Then Throw ex
         End Try
     End Sub
 End Class

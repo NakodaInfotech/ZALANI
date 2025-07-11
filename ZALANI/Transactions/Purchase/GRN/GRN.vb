@@ -1000,5 +1000,23 @@ NEXTLINE:
         End Try
     End Sub
 
+    Private Sub tstxtbillno_Validating(sender As Object, e As CancelEventArgs) Handles tstxtbillno.Validating
+        Try
+            If Val(tstxtbillno.Text.Trim) > 0 Then
+                GRIDGRN.RowCount = 0
+                TEMPGRNNO = Val(tstxtbillno.Text)
+                If TEMPGRNNO > 0 Then
+                    EDIT = True
+                    GRN_Load(sender, e)
+                Else
+                    CLEAR()
+                    EDIT = False
+                End If
+            End If
+        Catch ex As Exception
+            If ErrHandle(ex.Message.GetHashCode) = False Then Throw ex
+        End Try
+    End Sub
+
 
 End Class
