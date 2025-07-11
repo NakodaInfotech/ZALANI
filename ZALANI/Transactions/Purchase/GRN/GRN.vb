@@ -882,6 +882,7 @@ NEXTLINE:
         End Try
     End Sub
 
+
     Private Sub CMBQUALITY_Enter(sender As Object, e As EventArgs) Handles CMBQUALITY.Enter
         Try
             If CMBQUALITY.Text.Trim = "" Then FILLITEMNAME(CMBQUALITY, "")

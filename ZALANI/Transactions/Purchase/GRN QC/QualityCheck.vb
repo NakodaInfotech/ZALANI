@@ -1060,14 +1060,14 @@ NEXTLINE:
                 OBJGRN.Show()
             End If
 
-            If MsgBox("Wish to Print QC Test Report?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
-                Dim OBJGRN As New GRNDesign
-                OBJGRN.MdiParent = MDIMain
-                OBJGRN.GRNNO = QCNO
-                OBJGRN.FRMSTRING = "QCTEST"
-                OBJGRN.FORMULA = "{QUALITYCHECK.QC_NO} = " & QCNO & " AND {QUALITYCHECK.QC_YEARID} = " & YearId
-                OBJGRN.Show()
-            End If
+            'If MsgBox("Wish to Print QC Test Report?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
+            '    Dim OBJGRN As New GRNDesign
+            '    OBJGRN.MdiParent = MDIMain
+            '    OBJGRN.GRNNO = QCNO
+            '    OBJGRN.FRMSTRING = "QCTEST"
+            '    OBJGRN.FORMULA = "{QUALITYCHECK.QC_NO} = " & QCNO & " AND {QUALITYCHECK.QC_YEARID} = " & YearId
+            '    OBJGRN.Show()
+            'End If
         Catch ex As Exception
             Throw ex
         End Try
