@@ -25,6 +25,8 @@ Public Class SaleInvoiceDesign
     Dim OBJSO As New SOReport
 
     Dim OBJPROFORMA As New ProformaInvoiceReport
+    Dim OBJPACKINGSLIP As New PackingSlipReport
+
 
     Private Sub SaleInvoiceDesign_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.Control = True And e.KeyCode = Keys.P Then
@@ -58,6 +60,8 @@ Public Class SaleInvoiceDesign
 
             If FRMSTRING = "PROFORMA" Then crTables = OBJPROFORMA.Database.Tables
             If FRMSTRING = "SALEORDER" Then crTables = OBJSO.Database.Tables
+            If FRMSTRING = "PACKINGSLIP" Then crTables = OBJPACKINGSLIP.Database.Tables
+
 
 
             For Each crTable In crTables
@@ -78,6 +82,13 @@ Public Class SaleInvoiceDesign
                 strsearch = strsearch & "  {SALEORDER.SO_NO}= " & INVNO & " and {SALEORDER.SO_YEARID} = " & YearId
                 CRPO.SelectionFormula = strsearch
                 CRPO.ReportSource = OBJSO
+
+
+            ElseIf FRMSTRING = "PACKINGSLIP" Then
+                strsearch = strsearch & "  {PACKINGSLIP.PS_NO}= " & INVNO & " and {PACKINGSLIP.PS_YEARID} = " & YearId
+                CRPO.SelectionFormula = strsearch
+                CRPO.ReportSource = OBJPACKINGSLIP
+                OBJPACKINGSLIP.DataDefinition.FormulaFields("SENDMAIL").Text = "1"
 
             End If
 
@@ -124,6 +135,13 @@ Public Class SaleInvoiceDesign
             ElseIf FRMSTRING = "SALEORDER" Then
                 strsearch = "  {SALEORDER.SO_NO}= " & INVNO & " and {SALEORDER.SO_YEARID} = " & YearId
                 OBJ = New SOReport
+
+
+            ElseIf FRMSTRING = "PACKINGSLIP" Then
+                strsearch = "  {PACKINGSLIP.PS_NO}= " & INVNO & " and {PACKINGSLIP.PS_YEARID} = " & YearId
+                OBJ = New PackingSlipReport
+                OBJ.DataDefinition.FormulaFields("SENDMAIL").Text = "1"
+
             End If
 
             crTables = OBJ.Database.Tables
@@ -145,6 +163,8 @@ Public Class SaleInvoiceDesign
                 Dim oDfDopt As New DiskFileDestinationOptions
                 If FRMSTRING = "PROFORMA" Then oDfDopt.DiskFileName = Application.StartupPath & "\" & PARTYNAME & "PROFORMA_" & INVNO & ".pdf"
                 If FRMSTRING = "SALEORDER" Then oDfDopt.DiskFileName = Application.StartupPath & "\" & PARTYNAME & "SALEORDER_" & INVNO & ".pdf"
+                If FRMSTRING = "PACKINGSLIP" Then oDfDopt.DiskFileName = Application.StartupPath & "\" & PARTYNAME & "PACKINGSLIP_" & INVNO & ".pdf"
+
 
                 'CHECK WHETHER FILE IS PRESENT OR NOT, IF PRESENT THEN DELETE FIRST AND THEN EXPORT
                 If File.Exists(oDfDopt.DiskFileName) Then File.Delete(oDfDopt.DiskFileName)
@@ -175,6 +195,10 @@ Public Class SaleInvoiceDesign
             If FRMSTRING = "PROFORMA" Then
                 tempattachment = PARTYNAME & "PROFORMA_" & INVNO
                 objmail.subject = "PROFORAM INVOICE"
+
+            ElseIf FRMSTRING = "PACKINGSLIP" Then
+                tempattachment = PARTYNAME & "PACKINGSLIP_" & INVNO
+                objmail.subject = "PACKINGSLIP"
 
             ElseIf FRMSTRING = "SALEORDER" Then
                 tempattachment = PARTYNAME & "SALEORDER_" & INVNO
@@ -214,6 +238,15 @@ Public Class SaleInvoiceDesign
                 expo.ExportFormatType = ExportFormatType.PortableDocFormat
                 expo.DestinationOptions = oDfDopt
                 OBJSO.Export()
+
+            ElseIf FRMSTRING = "PACKINGSLIP" Then
+                oDfDopt.DiskFileName = Application.StartupPath & "\" & PARTYNAME & "PACKINGSLIP_" & INVNO & ".pdf"
+                expo = OBJSO.ExportOptions
+                expo.ExportDestinationType = ExportDestinationType.DiskFile
+                expo.ExportFormatType = ExportFormatType.PortableDocFormat
+                expo.DestinationOptions = oDfDopt
+                OBJSO.Export()
+
             End If
 
         Catch ex As Exception

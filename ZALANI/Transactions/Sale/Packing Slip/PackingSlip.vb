@@ -813,7 +813,7 @@ LINE1:
 
             Dim OBJSO As New SelectSO
             OBJSO.PARTYNAME = CMBNAME.Text.Trim
-            OBJSO.FRMSTRING = "PACKING"
+            OBJSO.FRMSTRING = "PACKINGSLIP"
             Dim DT As DataTable = OBJSO.DT
             OBJSO.ShowDialog()
 
@@ -952,7 +952,25 @@ LINE1:
     End Sub
 
     Private Sub PrintToolStripButton_Click(sender As Object, e As EventArgs) Handles PrintToolStripButton.Click
+        Try
+            If EDIT = True Then PRINTREPORT(TEMPPSNO)
+        Catch ex As Exception
+            If ErrHandle(ex.Message.GetHashCode) = False Then Throw ex
+        End Try
+    End Sub
 
+    Sub PRINTREPORT(ByVal PSNO As Integer)
+        Try
+            If MsgBox("Wish to Print Packing Slip?", MsgBoxStyle.YesNo) = vbNo Then Exit Sub
+            Dim OBJPACKINGSLIP As New SaleInvoiceDesign
+            OBJPACKINGSLIP.FRMSTRING = "PACKINGSLIP"
+            OBJPACKINGSLIP.INVNO = PSNO
+            OBJPACKINGSLIP.PARTYNAME = CMBNAME.Text.Trim
+            OBJPACKINGSLIP.MdiParent = MDIMain
+            OBJPACKINGSLIP.Show()
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 
     Private Sub CMBFINISHED_Validating(sender As Object, e As CancelEventArgs) Handles CMBFINISHED.Validating

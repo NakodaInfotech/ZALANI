@@ -1347,7 +1347,6 @@ Partial Class PackingSlip
         '
         Me.GDESC.HeaderText = "Desc"
         Me.GDESC.Name = "GDESC"
-        Me.GDESC.ReadOnly = True
         Me.GDESC.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.GDESC.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.GDESC.Width = 200
@@ -1479,7 +1478,6 @@ Partial Class PackingSlip
         '
         Me.GNARRATION.HeaderText = "Narration"
         Me.GNARRATION.Name = "GNARRATION"
-        Me.GNARRATION.ReadOnly = True
         Me.GNARRATION.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.GNARRATION.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
         '
