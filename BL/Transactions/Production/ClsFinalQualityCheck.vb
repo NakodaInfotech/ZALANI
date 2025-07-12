@@ -103,7 +103,19 @@ Public Class ClsFinalQualityCheck
                 I = I + 1
                 .Add(New SqlClient.SqlParameter("@PARTYOBS", alParaval(I)))
                 I = I + 1
-                .Add(New SqlClient.SqlParameter("@OUROBS", alParaval(I)))
+                .Add(New SqlClient.SqlParameter("@OUROBS1", alParaval(I)))
+                I = I + 1
+                .Add(New SqlClient.SqlParameter("@OUROBS2", alParaval(I)))
+                I = I + 1
+                .Add(New SqlClient.SqlParameter("@OUROBS3", alParaval(I)))
+                I = I + 1
+                .Add(New SqlClient.SqlParameter("@OUROBS4", alParaval(I)))
+                I = I + 1
+                .Add(New SqlClient.SqlParameter("@OUROBS5", alParaval(I)))
+                I = I + 1
+                .Add(New SqlClient.SqlParameter("@OUROBS6", alParaval(I)))
+                I = I + 1
+                .Add(New SqlClient.SqlParameter("@OUROBS7", alParaval(I)))
                 I = I + 1
 
             End With
@@ -202,7 +214,19 @@ Public Class ClsFinalQualityCheck
                 I = I + 1
                 .Add(New SqlClient.SqlParameter("@PARTYOBS", alParaval(I)))
                 I = I + 1
-                .Add(New SqlClient.SqlParameter("@OUROBS", alParaval(I)))
+                .Add(New SqlClient.SqlParameter("@OUROBS1", alParaval(I)))
+                I = I + 1
+                .Add(New SqlClient.SqlParameter("@OUROBS2", alParaval(I)))
+                I = I + 1
+                .Add(New SqlClient.SqlParameter("@OUROBS3", alParaval(I)))
+                I = I + 1
+                .Add(New SqlClient.SqlParameter("@OUROBS4", alParaval(I)))
+                I = I + 1
+                .Add(New SqlClient.SqlParameter("@OUROBS5", alParaval(I)))
+                I = I + 1
+                .Add(New SqlClient.SqlParameter("@OUROBS6", alParaval(I)))
+                I = I + 1
+                .Add(New SqlClient.SqlParameter("@OUROBS7", alParaval(I)))
                 I = I + 1
 
 

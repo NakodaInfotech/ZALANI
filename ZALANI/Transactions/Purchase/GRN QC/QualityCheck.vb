@@ -180,10 +180,6 @@ Public Class QualityCheck
                         OUROBS6 = OUROBS6 & "|" & row.Cells(POUROBS6.Index).Value.ToString
                         OUROBS7 = OUROBS7 & "|" & row.Cells(POUROBS7.Index).Value.ToString
 
-
-
-
-
                     End If
                 End If
             Next
@@ -461,6 +457,13 @@ Public Class QualityCheck
         TXTQCDONEBY.Clear()
         CMBSTATUS.Text = ""
         TXTOUROBS1.Clear()
+        TXTOUROBS2.Clear()
+        TXTOUROBS3.Clear()
+        TXTOUROBS4.Clear()
+        TXTOUROBS5.Clear()
+        TXTOUROBS6.Clear()
+        TXTOUROBS7.Clear()
+
         TXTPARTYOBS.Clear()
         CMBPARAMETER.Text = ""
         CMDSELECTGRN.Enabled = True

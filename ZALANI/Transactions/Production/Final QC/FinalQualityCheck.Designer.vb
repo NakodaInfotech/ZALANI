@@ -44,8 +44,8 @@ Partial Class FinalQualityCheck
         Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FinalQualityCheck))
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.BlendPanel1 = New VbPowerPack.BlendPanel()
         Me.GBIMAGE = New System.Windows.Forms.GroupBox()
         Me.GRIDUPLOADDESC = New System.Windows.Forms.DataGridView()
@@ -108,12 +108,8 @@ Partial Class FinalQualityCheck
         Me.TXTLOTNO = New System.Windows.Forms.TextBox()
         Me.txtsrno = New System.Windows.Forms.TextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.TXTOUROBS = New System.Windows.Forms.TextBox()
+        Me.TXTOUROBS1 = New System.Windows.Forms.TextBox()
         Me.GRIDPARAMETER = New System.Windows.Forms.DataGridView()
-        Me.GPSRNO = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GPARAMETER = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GPARTYOBS = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GOUROBS = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CMBPARAMETER = New System.Windows.Forms.ComboBox()
         Me.TXTPARTYOBS = New System.Windows.Forms.TextBox()
         Me.TXTPGRIDSRNO = New System.Windows.Forms.TextBox()
@@ -148,6 +144,22 @@ Partial Class FinalQualityCheck
         Me.PRINTDOC = New System.Drawing.Printing.PrintDocument()
         Me.PRINTDIALOG = New System.Windows.Forms.PrintDialog()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.TXTOUROBS7 = New System.Windows.Forms.TextBox()
+        Me.TXTOUROBS2 = New System.Windows.Forms.TextBox()
+        Me.TXTOUROBS3 = New System.Windows.Forms.TextBox()
+        Me.TXTOUROBS4 = New System.Windows.Forms.TextBox()
+        Me.TXTOUROBS5 = New System.Windows.Forms.TextBox()
+        Me.TXTOUROBS6 = New System.Windows.Forms.TextBox()
+        Me.EPSRNO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EPARAMETER = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EPARTYOBS = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EOUROBS1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EOUROBS2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EOUROBS3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EOUROBS4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EOUROBS5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EOUROBS6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EOUROBS7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BlendPanel1.SuspendLayout()
         Me.GBIMAGE.SuspendLayout()
         CType(Me.GRIDUPLOADDESC, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -942,25 +954,31 @@ Partial Class FinalQualityCheck
         '
         Me.TabPage2.AutoScroll = True
         Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(248, Byte), Integer))
-        Me.TabPage2.Controls.Add(Me.TXTOUROBS)
+        Me.TabPage2.Controls.Add(Me.TXTOUROBS7)
+        Me.TabPage2.Controls.Add(Me.TXTOUROBS2)
+        Me.TabPage2.Controls.Add(Me.TXTOUROBS3)
+        Me.TabPage2.Controls.Add(Me.TXTOUROBS4)
+        Me.TabPage2.Controls.Add(Me.TXTOUROBS5)
+        Me.TabPage2.Controls.Add(Me.TXTOUROBS6)
+        Me.TabPage2.Controls.Add(Me.TXTOUROBS1)
         Me.TabPage2.Controls.Add(Me.GRIDPARAMETER)
         Me.TabPage2.Controls.Add(Me.CMBPARAMETER)
         Me.TabPage2.Controls.Add(Me.TXTPARTYOBS)
         Me.TabPage2.Controls.Add(Me.TXTPGRIDSRNO)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 24)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1223, 285)
+        Me.TabPage2.Size = New System.Drawing.Size(1223, 283)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "2. Parameter & Obs."
         '
-        'TXTOUROBS
+        'TXTOUROBS1
         '
-        Me.TXTOUROBS.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTOUROBS.Location = New System.Drawing.Point(734, 2)
-        Me.TXTOUROBS.Name = "TXTOUROBS"
-        Me.TXTOUROBS.Size = New System.Drawing.Size(300, 23)
-        Me.TXTOUROBS.TabIndex = 2
+        Me.TXTOUROBS1.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTOUROBS1.Location = New System.Drawing.Point(434, 2)
+        Me.TXTOUROBS1.Name = "TXTOUROBS1"
+        Me.TXTOUROBS1.Size = New System.Drawing.Size(100, 23)
+        Me.TXTOUROBS1.TabIndex = 2
         '
         'GRIDPARAMETER
         '
@@ -981,7 +999,7 @@ Partial Class FinalQualityCheck
         DataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         Me.GRIDPARAMETER.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle19
         Me.GRIDPARAMETER.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.GRIDPARAMETER.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.GPSRNO, Me.GPARAMETER, Me.GPARTYOBS, Me.GOUROBS})
+        Me.GRIDPARAMETER.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.EPSRNO, Me.EPARAMETER, Me.EPARTYOBS, Me.EOUROBS1, Me.EOUROBS2, Me.EOUROBS3, Me.EOUROBS4, Me.EOUROBS5, Me.EOUROBS6, Me.EOUROBS7})
         DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle21.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1006,47 +1024,9 @@ Partial Class FinalQualityCheck
         Me.GRIDPARAMETER.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.GRIDPARAMETER.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.GRIDPARAMETER.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.GRIDPARAMETER.Size = New System.Drawing.Size(1067, 253)
+        Me.GRIDPARAMETER.Size = New System.Drawing.Size(1158, 253)
         Me.GRIDPARAMETER.TabIndex = 3
         Me.GRIDPARAMETER.TabStop = False
-        '
-        'GPSRNO
-        '
-        Me.GPSRNO.HeaderText = "Sr."
-        Me.GPSRNO.Name = "GPSRNO"
-        Me.GPSRNO.ReadOnly = True
-        Me.GPSRNO.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.GPSRNO.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.GPSRNO.Width = 30
-        '
-        'GPARAMETER
-        '
-        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        Me.GPARAMETER.DefaultCellStyle = DataGridViewCellStyle20
-        Me.GPARAMETER.HeaderText = "Parameter"
-        Me.GPARAMETER.Name = "GPARAMETER"
-        Me.GPARAMETER.ReadOnly = True
-        Me.GPARAMETER.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.GPARAMETER.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.GPARAMETER.Width = 400
-        '
-        'GPARTYOBS
-        '
-        Me.GPARTYOBS.HeaderText = "Party Obs."
-        Me.GPARTYOBS.Name = "GPARTYOBS"
-        Me.GPARTYOBS.ReadOnly = True
-        Me.GPARTYOBS.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.GPARTYOBS.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.GPARTYOBS.Width = 300
-        '
-        'GOUROBS
-        '
-        Me.GOUROBS.HeaderText = "Our Obs."
-        Me.GOUROBS.Name = "GOUROBS"
-        Me.GOUROBS.ReadOnly = True
-        Me.GOUROBS.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.GOUROBS.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.GOUROBS.Width = 300
         '
         'CMBPARAMETER
         '
@@ -1058,15 +1038,15 @@ Partial Class FinalQualityCheck
         Me.CMBPARAMETER.FormattingEnabled = True
         Me.CMBPARAMETER.Location = New System.Drawing.Point(34, 2)
         Me.CMBPARAMETER.Name = "CMBPARAMETER"
-        Me.CMBPARAMETER.Size = New System.Drawing.Size(400, 23)
+        Me.CMBPARAMETER.Size = New System.Drawing.Size(300, 23)
         Me.CMBPARAMETER.TabIndex = 0
         '
         'TXTPARTYOBS
         '
         Me.TXTPARTYOBS.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTPARTYOBS.Location = New System.Drawing.Point(434, 2)
+        Me.TXTPARTYOBS.Location = New System.Drawing.Point(334, 2)
         Me.TXTPARTYOBS.Name = "TXTPARTYOBS"
-        Me.TXTPARTYOBS.Size = New System.Drawing.Size(300, 23)
+        Me.TXTPARTYOBS.Size = New System.Drawing.Size(100, 23)
         Me.TXTPARTYOBS.TabIndex = 1
         '
         'TXTPGRIDSRNO
@@ -1395,6 +1375,144 @@ Partial Class FinalQualityCheck
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'TXTOUROBS7
+        '
+        Me.TXTOUROBS7.BackColor = System.Drawing.SystemColors.Window
+        Me.TXTOUROBS7.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTOUROBS7.Location = New System.Drawing.Point(1034, 2)
+        Me.TXTOUROBS7.Name = "TXTOUROBS7"
+        Me.TXTOUROBS7.Size = New System.Drawing.Size(100, 23)
+        Me.TXTOUROBS7.TabIndex = 554
+        '
+        'TXTOUROBS2
+        '
+        Me.TXTOUROBS2.BackColor = System.Drawing.SystemColors.Window
+        Me.TXTOUROBS2.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTOUROBS2.Location = New System.Drawing.Point(534, 2)
+        Me.TXTOUROBS2.Name = "TXTOUROBS2"
+        Me.TXTOUROBS2.Size = New System.Drawing.Size(100, 23)
+        Me.TXTOUROBS2.TabIndex = 549
+        '
+        'TXTOUROBS3
+        '
+        Me.TXTOUROBS3.BackColor = System.Drawing.SystemColors.Window
+        Me.TXTOUROBS3.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTOUROBS3.Location = New System.Drawing.Point(634, 2)
+        Me.TXTOUROBS3.Name = "TXTOUROBS3"
+        Me.TXTOUROBS3.Size = New System.Drawing.Size(100, 23)
+        Me.TXTOUROBS3.TabIndex = 550
+        '
+        'TXTOUROBS4
+        '
+        Me.TXTOUROBS4.BackColor = System.Drawing.SystemColors.Window
+        Me.TXTOUROBS4.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTOUROBS4.Location = New System.Drawing.Point(734, 2)
+        Me.TXTOUROBS4.Name = "TXTOUROBS4"
+        Me.TXTOUROBS4.Size = New System.Drawing.Size(100, 23)
+        Me.TXTOUROBS4.TabIndex = 551
+        '
+        'TXTOUROBS5
+        '
+        Me.TXTOUROBS5.BackColor = System.Drawing.SystemColors.Window
+        Me.TXTOUROBS5.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTOUROBS5.Location = New System.Drawing.Point(834, 2)
+        Me.TXTOUROBS5.Name = "TXTOUROBS5"
+        Me.TXTOUROBS5.Size = New System.Drawing.Size(100, 23)
+        Me.TXTOUROBS5.TabIndex = 552
+        '
+        'TXTOUROBS6
+        '
+        Me.TXTOUROBS6.BackColor = System.Drawing.SystemColors.Window
+        Me.TXTOUROBS6.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTOUROBS6.Location = New System.Drawing.Point(934, 2)
+        Me.TXTOUROBS6.Name = "TXTOUROBS6"
+        Me.TXTOUROBS6.Size = New System.Drawing.Size(100, 23)
+        Me.TXTOUROBS6.TabIndex = 553
+        '
+        'EPSRNO
+        '
+        Me.EPSRNO.HeaderText = "Sr."
+        Me.EPSRNO.Name = "EPSRNO"
+        Me.EPSRNO.ReadOnly = True
+        Me.EPSRNO.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.EPSRNO.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.EPSRNO.Width = 30
+        '
+        'EPARAMETER
+        '
+        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        Me.EPARAMETER.DefaultCellStyle = DataGridViewCellStyle20
+        Me.EPARAMETER.HeaderText = "Parameter"
+        Me.EPARAMETER.Name = "EPARAMETER"
+        Me.EPARAMETER.ReadOnly = True
+        Me.EPARAMETER.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.EPARAMETER.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.EPARAMETER.Width = 300
+        '
+        'EPARTYOBS
+        '
+        Me.EPARTYOBS.HeaderText = "Party Obs."
+        Me.EPARTYOBS.Name = "EPARTYOBS"
+        Me.EPARTYOBS.ReadOnly = True
+        Me.EPARTYOBS.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.EPARTYOBS.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'EOUROBS1
+        '
+        Me.EOUROBS1.HeaderText = "Our Obs.1"
+        Me.EOUROBS1.Name = "EOUROBS1"
+        Me.EOUROBS1.ReadOnly = True
+        Me.EOUROBS1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.EOUROBS1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'EOUROBS2
+        '
+        Me.EOUROBS2.HeaderText = "Our Obs.2"
+        Me.EOUROBS2.Name = "EOUROBS2"
+        Me.EOUROBS2.ReadOnly = True
+        Me.EOUROBS2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.EOUROBS2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'EOUROBS3
+        '
+        Me.EOUROBS3.HeaderText = "Our Obs.3"
+        Me.EOUROBS3.Name = "EOUROBS3"
+        Me.EOUROBS3.ReadOnly = True
+        Me.EOUROBS3.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.EOUROBS3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'EOUROBS4
+        '
+        Me.EOUROBS4.HeaderText = "Our Obs.4"
+        Me.EOUROBS4.Name = "EOUROBS4"
+        Me.EOUROBS4.ReadOnly = True
+        Me.EOUROBS4.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.EOUROBS4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'EOUROBS5
+        '
+        Me.EOUROBS5.HeaderText = "Our Obs.5"
+        Me.EOUROBS5.Name = "EOUROBS5"
+        Me.EOUROBS5.ReadOnly = True
+        Me.EOUROBS5.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.EOUROBS5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'EOUROBS6
+        '
+        Me.EOUROBS6.HeaderText = "Our Obs.6"
+        Me.EOUROBS6.Name = "EOUROBS6"
+        Me.EOUROBS6.ReadOnly = True
+        Me.EOUROBS6.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.EOUROBS6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'EOUROBS7
+        '
+        Me.EOUROBS7.HeaderText = "Our Obs.7"
+        Me.EOUROBS7.Name = "EOUROBS7"
+        Me.EOUROBS7.ReadOnly = True
+        Me.EOUROBS7.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.EOUROBS7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
         'FinalQualityCheck
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
@@ -1451,12 +1569,8 @@ Partial Class FinalQualityCheck
     Friend WithEvents Label10 As Label
     Friend WithEvents LBLTOTALQTY As Label
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents TXTOUROBS As TextBox
+    Friend WithEvents TXTOUROBS1 As TextBox
     Friend WithEvents GRIDPARAMETER As DataGridView
-    Friend WithEvents GPSRNO As DataGridViewTextBoxColumn
-    Friend WithEvents GPARAMETER As DataGridViewTextBoxColumn
-    Friend WithEvents GPARTYOBS As DataGridViewTextBoxColumn
-    Friend WithEvents GOUROBS As DataGridViewTextBoxColumn
     Friend WithEvents CMBPARAMETER As ComboBox
     Friend WithEvents TXTPARTYOBS As TextBox
     Friend WithEvents TXTPGRIDSRNO As TextBox
@@ -1533,4 +1647,20 @@ Partial Class FinalQualityCheck
     Friend WithEvents GFROMTYPE As DataGridViewTextBoxColumn
     Friend WithEvents GDONE As DataGridViewTextBoxColumn
     Friend WithEvents GOUTQTY As DataGridViewTextBoxColumn
+    Friend WithEvents TXTOUROBS7 As TextBox
+    Friend WithEvents TXTOUROBS2 As TextBox
+    Friend WithEvents TXTOUROBS3 As TextBox
+    Friend WithEvents TXTOUROBS4 As TextBox
+    Friend WithEvents TXTOUROBS5 As TextBox
+    Friend WithEvents TXTOUROBS6 As TextBox
+    Friend WithEvents EPSRNO As DataGridViewTextBoxColumn
+    Friend WithEvents EPARAMETER As DataGridViewTextBoxColumn
+    Friend WithEvents EPARTYOBS As DataGridViewTextBoxColumn
+    Friend WithEvents EOUROBS1 As DataGridViewTextBoxColumn
+    Friend WithEvents EOUROBS2 As DataGridViewTextBoxColumn
+    Friend WithEvents EOUROBS3 As DataGridViewTextBoxColumn
+    Friend WithEvents EOUROBS4 As DataGridViewTextBoxColumn
+    Friend WithEvents EOUROBS5 As DataGridViewTextBoxColumn
+    Friend WithEvents EOUROBS6 As DataGridViewTextBoxColumn
+    Friend WithEvents EOUROBS7 As DataGridViewTextBoxColumn
 End Class
