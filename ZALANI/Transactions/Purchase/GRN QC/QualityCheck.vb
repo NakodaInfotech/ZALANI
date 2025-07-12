@@ -142,7 +142,13 @@ Public Class QualityCheck
             Dim PGRIDSRNO As String = ""
             Dim PARAMETER As String = ""
             Dim PARTYOBS As String = ""
-            Dim OUROBS As String = ""
+            Dim OUROBS1 As String = ""
+            Dim OUROBS2 As String = ""
+            Dim OUROBS3 As String = ""
+            Dim OUROBS4 As String = ""
+            Dim OUROBS5 As String = ""
+            Dim OUROBS6 As String = ""
+            Dim OUROBS7 As String = ""
 
 
             For Each row As Windows.Forms.DataGridViewRow In GRIDPARAMETER.Rows
@@ -151,7 +157,14 @@ Public Class QualityCheck
                         PGRIDSRNO = Val(row.Cells(PSRNO.Index).Value)
                         PARAMETER = row.Cells(PPARAMETER.Index).Value.ToString
                         PARTYOBS = row.Cells(PPARTYOBS.Index).Value.ToString
-                        OUROBS = row.Cells(POUROBS.Index).Value.ToString
+                        OUROBS1 = row.Cells(POUROBS1.Index).Value.ToString
+                        OUROBS2 = row.Cells(POUROBS2.Index).Value.ToString
+                        OUROBS3 = row.Cells(POUROBS3.Index).Value.ToString
+                        OUROBS4 = row.Cells(POUROBS4.Index).Value.ToString
+                        OUROBS5 = row.Cells(POUROBS5.Index).Value.ToString
+                        OUROBS6 = row.Cells(POUROBS6.Index).Value.ToString
+                        OUROBS7 = row.Cells(POUROBS7.Index).Value.ToString
+
 
 
                     Else
@@ -159,7 +172,15 @@ Public Class QualityCheck
                         PGRIDSRNO = PGRIDSRNO & "|" & Val(row.Cells(PSRNO.Index).Value)
                         PARAMETER = PARAMETER & "|" & row.Cells(PPARAMETER.Index).Value.ToString
                         PARTYOBS = PARTYOBS & "|" & row.Cells(PPARTYOBS.Index).Value.ToString
-                        OUROBS = OUROBS & "|" & row.Cells(POUROBS.Index).Value.ToString
+                        OUROBS1 = OUROBS1 & "|" & row.Cells(POUROBS1.Index).Value.ToString
+                        OUROBS2 = OUROBS2 & "|" & row.Cells(POUROBS2.Index).Value.ToString
+                        OUROBS3 = OUROBS3 & "|" & row.Cells(POUROBS3.Index).Value.ToString
+                        OUROBS4 = OUROBS4 & "|" & row.Cells(POUROBS4.Index).Value.ToString
+                        OUROBS5 = OUROBS5 & "|" & row.Cells(POUROBS5.Index).Value.ToString
+                        OUROBS6 = OUROBS6 & "|" & row.Cells(POUROBS6.Index).Value.ToString
+                        OUROBS7 = OUROBS7 & "|" & row.Cells(POUROBS7.Index).Value.ToString
+
+
 
 
 
@@ -170,9 +191,13 @@ Public Class QualityCheck
             alParaval.Add(PGRIDSRNO)
             alParaval.Add(PARAMETER)
             alParaval.Add(PARTYOBS)
-            alParaval.Add(OUROBS)
-
-
+            alParaval.Add(OUROBS1)
+            alParaval.Add(OUROBS2)
+            alParaval.Add(OUROBS3)
+            alParaval.Add(OUROBS4)
+            alParaval.Add(OUROBS5)
+            alParaval.Add(OUROBS6)
+            alParaval.Add(OUROBS7)
 
 
             Dim objclsPurord As New ClsQualityCheck()
@@ -365,10 +390,10 @@ Public Class QualityCheck
                     Next
                     TOTAL()
 
-                    Dim dt As DataTable = OBJCMN.SEARCH("  ISNULL(QUALITYCHECK_PARAMETERS.QC_NO, 0) AS QCNO, ISNULL(QUALITYCHECK_PARAMETERS.QC_PGRIDSRNO, 0) AS PGRIDSRNO, ISNULL(QUALITYCHECK_PARAMETERS.QC_PARTYOBS, '') AS PARTYOBS, ISNULL(QUALITYCHECK_PARAMETERS.QC_OUROBS, '') AS OUROBS, ISNULL(QCPARAMETERMASTER.QC_name, '') AS PARAMETERNAME", "", "  QUALITYCHECK_PARAMETERS LEFT OUTER JOIN QCPARAMETERMASTER ON QUALITYCHECK_PARAMETERS.QC_PARAMETERID = QCPARAMETERMASTER.QC_id ", "  AND QUALITYCHECK_PARAMETERS.QC_NO = " & TEMPQCNO & " AND  QUALITYCHECK_PARAMETERS.QC_YEARID = " & YearId & " ORDER BY  QUALITYCHECK_PARAMETERS.QC_Pgridsrno")
+                    Dim dt As DataTable = OBJCMN.SEARCH("  ISNULL(QUALITYCHECK_PARAMETERS.QC_NO, 0) AS QCNO, ISNULL(QUALITYCHECK_PARAMETERS.QC_PGRIDSRNO, 0) AS PGRIDSRNO, ISNULL(QUALITYCHECK_PARAMETERS.QC_PARTYOBS, '') AS PARTYOBS,  ISNULL(QUALITYCHECK_PARAMETERS.QC_OUROBS1,0) AS OUROBS1, ISNULL(QUALITYCHECK_PARAMETERS.QC_OUROBS2,0) AS OUROBS2, ISNULL(QUALITYCHECK_PARAMETERS.QC_OUROBS3,0) AS OUROBS3, ISNULL(QUALITYCHECK_PARAMETERS.QC_OUROBS4,0) AS OUROBS4, ISNULL(QUALITYCHECK_PARAMETERS.QC_OUROBS5,0) AS OUROBS5, ISNULL(QUALITYCHECK_PARAMETERS.QC_OUROBS6,0) AS OUROBS6, ISNULL(QUALITYCHECK_PARAMETERS.QC_OUROBS7,0) AS OUROBS7,  ISNULL(QCPARAMETERMASTER.QC_name, '') AS PARAMETERNAME", "", "  QUALITYCHECK_PARAMETERS LEFT OUTER JOIN QCPARAMETERMASTER ON QUALITYCHECK_PARAMETERS.QC_PARAMETERID = QCPARAMETERMASTER.QC_id ", "  AND QUALITYCHECK_PARAMETERS.QC_NO = " & TEMPQCNO & " AND  QUALITYCHECK_PARAMETERS.QC_YEARID = " & YearId & " ORDER BY  QUALITYCHECK_PARAMETERS.QC_Pgridsrno")
                     If dt.Rows.Count > 0 Then
                         For Each DTR As DataRow In dt.Rows
-                            GRIDPARAMETER.Rows.Add(DTR("PGRIDSRNO"), DTR("PARAMETERNAME"), DTR("PARTYOBS"), DTR("OUROBS"))
+                            GRIDPARAMETER.Rows.Add(DTR("PGRIDSRNO"), DTR("PARAMETERNAME"), DTR("PARTYOBS"), DTR("OUROBS1"), DTR("OUROBS2"), DTR("OUROBS3"), DTR("OUROBS4"), DTR("OUROBS5"), DTR("OUROBS6"), DTR("OUROBS7"))
                         Next
                     End If
 
@@ -435,7 +460,7 @@ Public Class QualityCheck
         TXTNARRATION.Clear()
         TXTQCDONEBY.Clear()
         CMBSTATUS.Text = ""
-        TXTOUROBS.Clear()
+        TXTOUROBS1.Clear()
         TXTPARTYOBS.Clear()
         CMBPARAMETER.Text = ""
         CMDSELECTGRN.Enabled = True
@@ -652,13 +677,21 @@ LINE1:
     Sub FILLPARAMETERGRID()
         GRIDPARAMETER.Enabled = True
         If GRIDPARAMETERDOUBLECLICK = False Then
-            GRIDPARAMETER.Rows.Add(Val(TXTPGRIDSRNO.Text.Trim), CMBPARAMETER.Text.Trim, TXTPARTYOBS.Text.Trim, TXTOUROBS.Text.Trim)
+            GRIDPARAMETER.Rows.Add(Val(TXTPGRIDSRNO.Text.Trim), CMBPARAMETER.Text.Trim, TXTPARTYOBS.Text.Trim, TXTOUROBS1.Text.Trim, TXTOUROBS2.Text.Trim, TXTOUROBS3.Text.Trim, TXTOUROBS4.Text.Trim, TXTOUROBS5.Text.Trim, TXTOUROBS6.Text.Trim, TXTOUROBS7.Text.Trim)
             getsrno(GRIDPARAMETER)
         ElseIf GRIDPARAMETERDOUBLECLICK = True Then
             GRIDPARAMETER.Item(PSRNO.Index, TEMPPARAMETERROW).Value = Val(TXTPGRIDSRNO.Text.Trim)
             GRIDPARAMETER.Item(PPARAMETER.Index, TEMPPARAMETERROW).Value = CMBPARAMETER.Text.Trim
             GRIDPARAMETER.Item(PPARTYOBS.Index, TEMPPARAMETERROW).Value = TXTPARTYOBS.Text.Trim
-            GRIDPARAMETER.Item(POUROBS.Index, TEMPPARAMETERROW).Value = TXTOUROBS.Text.Trim
+            GRIDPARAMETER.Item(POUROBS1.Index, TEMPPARAMETERROW).Value = TXTOUROBS1.Text.Trim
+            GRIDPARAMETER.Item(POUROBS2.Index, TEMPPARAMETERROW).Value = TXTOUROBS2.Text.Trim
+            GRIDPARAMETER.Item(POUROBS3.Index, TEMPPARAMETERROW).Value = TXTOUROBS3.Text.Trim
+            GRIDPARAMETER.Item(POUROBS4.Index, TEMPPARAMETERROW).Value = TXTOUROBS4.Text.Trim
+            GRIDPARAMETER.Item(POUROBS5.Index, TEMPPARAMETERROW).Value = TXTOUROBS5.Text.Trim
+            GRIDPARAMETER.Item(POUROBS6.Index, TEMPPARAMETERROW).Value = TXTOUROBS6.Text.Trim
+            GRIDPARAMETER.Item(POUROBS7.Index, TEMPPARAMETERROW).Value = TXTOUROBS7.Text.Trim
+
+
             GRIDPARAMETERDOUBLECLICK = False
         End If
 
@@ -666,15 +699,22 @@ LINE1:
         TXTPGRIDSRNO.Text = GRIDPARAMETER.RowCount + 1
         CMBPARAMETER.Text = ""
         TXTPARTYOBS.Clear()
-        TXTOUROBS.Clear()
+        TXTOUROBS1.Clear()
+        TXTOUROBS2.Clear()
+        TXTOUROBS3.Clear()
+        TXTOUROBS4.Clear()
+        TXTOUROBS5.Clear()
+        TXTOUROBS6.Clear()
+        TXTOUROBS7.Clear()
+
 
         CMBPARAMETER.Focus()
 
     End Sub
 
-    Private Sub TXTOUROBS_Validated(sender As Object, e As EventArgs) Handles TXTOUROBS.Validated
+    Private Sub TXTOUROBS_Validated(sender As Object, e As EventArgs) Handles TXTOUROBS7.Validated
         Try
-            If CMBPARAMETER.Text.Trim <> "" And TXTOUROBS.Text.Trim <> "" Then FILLPARAMETERGRID()
+            If CMBPARAMETER.Text.Trim <> "" Then FILLPARAMETERGRID()
         Catch ex As Exception
             Throw ex
         End Try
@@ -1113,7 +1153,7 @@ NEXTLINE:
         End Try
     End Sub
 
-    Private Sub TXTGSM_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXTGSM.KeyPress
+    Private Sub TXTGSM_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXTGSM.KeyPress, TXTOUROBS1.KeyPress, TXTOUROBS2.KeyPress, TXTOUROBS3.KeyPress, TXTOUROBS4.KeyPress, TXTOUROBS5.KeyPress, TXTOUROBS6.KeyPress, TXTOUROBS7.KeyPress
         numdotkeypress(e, sender, Me)
     End Sub
 
@@ -1146,7 +1186,14 @@ NEXTLINE:
                 TXTPGRIDSRNO.Text = GRIDPARAMETER.Item(PSRNO.Index, GRIDPARAMETER.CurrentRow.Index).Value.ToString
                 CMBPARAMETER.Text = GRIDPARAMETER.Item(PPARAMETER.Index, GRIDPARAMETER.CurrentRow.Index).Value.ToString
                 TXTPARTYOBS.Text = GRIDPARAMETER.Item(PPARTYOBS.Index, GRIDPARAMETER.CurrentRow.Index).Value.ToString
-                TXTOUROBS.Text = GRIDPARAMETER.Item(POUROBS.Index, GRIDPARAMETER.CurrentRow.Index).Value.ToString
+                TXTOUROBS1.Text = GRIDPARAMETER.Item(POUROBS1.Index, GRIDPARAMETER.CurrentRow.Index).Value.ToString
+                TXTOUROBS2.Text = GRIDPARAMETER.Item(POUROBS2.Index, GRIDPARAMETER.CurrentRow.Index).Value.ToString
+                TXTOUROBS3.Text = GRIDPARAMETER.Item(POUROBS3.Index, GRIDPARAMETER.CurrentRow.Index).Value.ToString
+                TXTOUROBS4.Text = GRIDPARAMETER.Item(POUROBS4.Index, GRIDPARAMETER.CurrentRow.Index).Value.ToString
+                TXTOUROBS5.Text = GRIDPARAMETER.Item(POUROBS5.Index, GRIDPARAMETER.CurrentRow.Index).Value.ToString
+                TXTOUROBS6.Text = GRIDPARAMETER.Item(POUROBS6.Index, GRIDPARAMETER.CurrentRow.Index).Value.ToString
+                TXTOUROBS7.Text = GRIDPARAMETER.Item(POUROBS7.Index, GRIDPARAMETER.CurrentRow.Index).Value.ToString
+
                 TEMPPARAMETERROW = GRIDPARAMETER.CurrentRow.Index
                 CMBPARAMETER.Focus()
             End If
