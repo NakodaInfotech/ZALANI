@@ -10,7 +10,7 @@ Public Class GRNDesign
     Public FORMULA As String
 
     Dim RPTQC As New QCReport
-    Dim RPTQCTEST As New QCReport
+    Dim RPTQCTEST As New QCTestReport
     Dim RPTFINALQC As New FinalQCReport
     Dim RPTFINALQCTEST As New FinalQCReport
 

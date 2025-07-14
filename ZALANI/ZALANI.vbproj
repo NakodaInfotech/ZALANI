@@ -1355,10 +1355,10 @@
     <Compile Include="Transactions\Production\Production Recd\SelectIssue.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Transactions\Purchase\GRN QC\QualityCheck.Designer.vb">
+    <Compile Include="Transactions\Purchase\GRN\QualityCheck.Designer.vb">
       <DependentUpon>QualityCheck.vb</DependentUpon>
     </Compile>
-    <Compile Include="Transactions\Purchase\GRN QC\QualityCheck.vb">
+    <Compile Include="Transactions\Purchase\GRN\QualityCheck.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Transactions\Purchase\GRN QC\QualityCheckDetails.Designer.vb">
@@ -2412,7 +2412,7 @@
     <EmbeddedResource Include="Transactions\Production\Production Recd\SelectIssue.resx">
       <DependentUpon>SelectIssue.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Transactions\Purchase\GRN QC\QualityCheck.resx">
+    <EmbeddedResource Include="Transactions\Purchase\GRN\QualityCheck.resx">
       <DependentUpon>QualityCheck.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transactions\Purchase\GRN QC\QualityCheckDetails.resx">

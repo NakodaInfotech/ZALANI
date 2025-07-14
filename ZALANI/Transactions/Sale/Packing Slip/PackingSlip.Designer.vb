@@ -365,11 +365,11 @@ Partial Class PackingSlip
         Me.LBLTOTALPALLETTEWT.BackColor = System.Drawing.Color.Transparent
         Me.LBLTOTALPALLETTEWT.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLTOTALPALLETTEWT.ForeColor = System.Drawing.Color.Black
-        Me.LBLTOTALPALLETTEWT.Location = New System.Drawing.Point(639, 90)
+        Me.LBLTOTALPALLETTEWT.Location = New System.Drawing.Point(659, 90)
         Me.LBLTOTALPALLETTEWT.Name = "LBLTOTALPALLETTEWT"
-        Me.LBLTOTALPALLETTEWT.Size = New System.Drawing.Size(100, 14)
+        Me.LBLTOTALPALLETTEWT.Size = New System.Drawing.Size(80, 14)
         Me.LBLTOTALPALLETTEWT.TabIndex = 970
-        Me.LBLTOTALPALLETTEWT.Text = "Total Pallette WT"
+        Me.LBLTOTALPALLETTEWT.Text = "Total Pallette"
         '
         'TXTTOTALPALLETTEWT
         '
