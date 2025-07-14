@@ -1189,11 +1189,11 @@ LINE1:
     Sub FILLGRIDSINGLERECD()
 
         If GRIDSINGLEDOUBLECLICK = False Then
-            GRIDRECD.Rows.Add(Val(TXTGRIDSINGLERECDSRNO.Text.Trim), Val(TXTROLLNO.Text.Trim), TXTRLOTNO.Text.Trim, Format(Val(TXTRGSM.Text.Trim), "0.00"), TXTGSMDETAILS.Text.Trim, Val(TXTRSIZE.Text.Trim), TXTRECDWT.Text.Trim, CMBIUNIT.Text.Trim, TXTJOINT.Text.Trim, TXTNARRATION.Text.Trim, 0)
+            GRIDRECD.Rows.Add(Val(TXTGRIDSINGLERECDSRNO.Text.Trim), TXTROLLNO.Text.Trim, TXTRLOTNO.Text.Trim, Format(Val(TXTRGSM.Text.Trim), "0.00"), TXTGSMDETAILS.Text.Trim, Val(TXTRSIZE.Text.Trim), TXTRECDWT.Text.Trim, CMBIUNIT.Text.Trim, TXTJOINT.Text.Trim, TXTNARRATION.Text.Trim, 0)
             getsrno(GRIDRECD)
         ElseIf GRIDSINGLEDOUBLECLICK = True Then
             GRIDRECD.Item(SGRIDSINGLERECDSRNO.Index, TEMPSINGLEROW).Value = Val(TXTGRIDSINGLERECDSRNO.Text.Trim)
-            GRIDRECD.Item(SROLLNO.Index, TEMPSINGLEROW).Value = Val(TXTROLLNO.Text.Trim)
+            GRIDRECD.Item(SROLLNO.Index, TEMPSINGLEROW).Value = TXTROLLNO.Text.Trim
             GRIDRECD.Item(SLOTNO.Index, TEMPSINGLEROW).Value = TXTRLOTNO.Text.Trim
             GRIDRECD.Item(SGSM.Index, TEMPSINGLEROW).Value = Val(TXTRGSM.Text.Trim)
             GRIDRECD.Item(SGSMDETAILS.Index, TEMPSINGLEROW).Value = TXTGSMDETAILS.Text.Trim
@@ -1222,7 +1222,7 @@ LINE1:
 
         'If GRIDRECD.RowCount > 0 Then TXTROLLNO.Text = Val(GRIDRECD.Rows(GRIDRECD.RowCount - 1).Cells(SROLLNO.Index).Value) + 1 Else GETMAXROLLNO()
 
-        TXTRLOTNO.Focus()
+        TXTROLLNO.Focus()
     End Sub
 
     Sub EDITSINGLEROW()
