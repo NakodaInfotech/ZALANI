@@ -737,6 +737,7 @@ LINE1:
             If CMBMACHINENO.Text.Trim <> "" Then
 
                 Dim OBJSELECTPO As New SelectStock
+                OBJSELECTPO.FRMSTRING = "MATREQ"
                 OBJSELECTPO.GODOWN = CMBGODOWN.Text.Trim
                 Dim DTPO As DataTable = OBJSELECTPO.DT
                 OBJSELECTPO.ShowDialog()
