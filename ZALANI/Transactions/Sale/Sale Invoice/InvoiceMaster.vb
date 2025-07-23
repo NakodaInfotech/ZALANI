@@ -468,7 +468,7 @@ Public Class InvoiceMaster
                 EDIT = False
             End If
 
-            'PRINTREPORT(Val(TXTINVOICENO.Text.Trim))
+            PRINTREPORT(Val(TXTINVOICENO.Text.Trim))
             CLEAR()
             CMBNAME.Focus()
         Catch ex As Exception
@@ -478,11 +478,12 @@ Public Class InvoiceMaster
         End Try
     End Sub
 
+
     Sub PRINTREPORT(ByVal INVOICENO As Integer)
         Try
             If MsgBox("Wish to Print Invoice?", MsgBoxStyle.YesNo) = vbNo Then Exit Sub
             Dim OBJPROFORMA As New SaleInvoiceDesign
-            OBJPROFORMA.FRMSTRING = "INVOICENO"
+            OBJPROFORMA.FRMSTRING = "INVOICE"
             OBJPROFORMA.INVNO = INVOICENO
             OBJPROFORMA.PARTYNAME = CMBNAME.Text.Trim
             OBJPROFORMA.MdiParent = MDIMain

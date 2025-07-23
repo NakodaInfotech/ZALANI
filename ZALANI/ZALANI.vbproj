@@ -423,6 +423,12 @@
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Reports\Crystal Reports\Sales\Sale Invoice\SaleInvoice_zalani.vb">
+      <DependentUpon>SaleInvoice_zalani.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Reports\Crystal Reports\Sales\Sale Invoice\SaleInvoiceReport.vb">
       <DependentUpon>SaleInvoiceReport.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -1890,6 +1896,10 @@
     <EmbeddedResource Include="Reports\Crystal Reports\Purchase\Quality Check\QCReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>QCReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Crystal Reports\Sales\Sale Invoice\SaleInvoice_zalani.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SaleInvoice_zalani.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Crystal Reports\Sales\Sale Invoice\SaleInvoiceReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
