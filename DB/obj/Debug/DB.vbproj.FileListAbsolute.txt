@@ -10,9 +10,10 @@ D:\VSS\VSS\ZALANI\VSS\ZALANI\ZALANI\DB\obj\Debug\DB.pdb
 D:\GIT\ZALANI\DB\bin\Debug\DB.dll
 D:\GIT\ZALANI\DB\bin\Debug\DB.pdb
 D:\GIT\ZALANI\DB\bin\Debug\DB.xml
-D:\GIT\ZALANI\DB\obj\Debug\DB.vbprojResolveAssemblyReference.cache
+D:\GIT\ZALANI\DB\obj\Debug\DB.vbproj.AssemblyReference.cache
 D:\GIT\ZALANI\DB\obj\Debug\DB.Resources.resources
-D:\GIT\ZALANI\DB\obj\Debug\DB.vbproj.GenerateResource.Cache
+D:\GIT\ZALANI\DB\obj\Debug\DB.vbproj.GenerateResource.cache
+D:\GIT\ZALANI\DB\obj\Debug\DB.vbproj.CoreCompileInputs.cache
 D:\GIT\ZALANI\DB\obj\Debug\DB.dll
 D:\GIT\ZALANI\DB\obj\Debug\DB.xml
 D:\GIT\ZALANI\DB\obj\Debug\DB.pdb
